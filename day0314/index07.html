@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发现</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+			}
+			html,body{
+				height: 100%;
+			}
+			.header{
+				widows: 100%;
+				background: #0f91c5;
+				font-size: 16px;
+				padding: 10px 0;
+				text-align: center;
+				color: white;
+				
+			}
+			.sou{
+				display: flex;justify-content:space-around;
+				width: 100%;
+				margin: 5px 0;
+			}
+			.text{
+				border: 1px solid darkgrey;
+				width: 258px;
+				height: 22px;
+				border-radius:5px;
+			}
+			.sousuo{
+				width: 47px;
+				height: 24px;
+				background: #0f91c5;
+				text-align: center;
+				line-height: 24px;
+				border-radius:3px;
+				color: white;
+				font-size: 12px;
+			}
+			.hui{
+				height: 5px;
+				width: 100%;
+				background: #f1f1f1;
+			}
+			.bai{
+			width: 100%;
+			
+			}
+			.baobao{
+				width: 100%;
+				overflow: hidden;
+				border: 1px solid #f1f1f1;
+			}
+			.pi_1{
+				width: 47px;
+				height: 47px;
+				margin: 10px 0 10px 10px;
+				background: url(img/a1.png) no-repeat;
+				background-size:100% 100% ;
+				float: left;
+			}
+			.pi_2{
+				font-size: 12px;
+				color: #999999;
+				margin: 15px 0 0 8px;
+				float: left;
+			}
+			.pi_2 a{
+				font-size: 14px;
+				font-weight: bold;
+				color: black;
+			}
+			.end{
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			background: white;
+		}
+		.end ul li{
+			float: left;
+			width: 20%;
+		}
+		.end ul .li_1 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			background: url(img/b1.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_3 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			
+			background:url(img/g2.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_5 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			background: url(img/b3.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_7 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			background: url(img/b4.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_1 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #cccccc;
+			font-size: 12px;
+		}
+		.end ul .li_3 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #0f91c5;
+			font-size: 12px;
+		}
+		.end ul .li_5 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #cccccc;
+			font-size: 12px;
+		}
+		.end ul .li_7 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #cccccc;
+			font-size: 12px;
+		}
+		.end ul .li_2{
+			
+			
+			
+		}
+		.end ul .li_2 a{
+			display: block;
+			width: 43px;
+			height: 43px;
+			background: url(img/q4.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 0px auto;
+			position: relative;
+			top: -5px;
+			
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="header">
+				发现
+			</div>
+			<div class="sou">
+				<input type="text" placeholder="请输入昵称" class="text"/>
+				<input type="button" class="sousuo" value="搜索" />
+				
+			</div>
+			<div class="hui">
+					
+			</div>
+		</div>
+		
+		<div class="baobao">
+			<div class="bai">
+						<div class="pi_1">
+							
+						</div>
+						<div class="pi_2">
+							<a>我叫小萌,</a></br>
+							我是小萌，我怕谁！哈哈哈
+						</div>
+			</div>	
+		</div>
+		
+		<div class="end">
+				<ul>
+					<li class="li_1"><a href="index05.html"></a><span>首页</span></li>
+					<li class="li_3"><a href="index07.html"></a><span>发现</span></li>
+					<li class="li_2"><a></a></li>
+					<li class="li_5"><a href="index08.html"></a><span>我的</span></li>
+					<li class="li_7"><a></a><span>退出</span></li>
+				</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	
+	<script>
+		$('.sousuo').on("click",function(e){
+			
+						
+				e.preventDefault();
+				var a = $('.text').val(),
+			
+					userInfo = window.localStorage;
+					if(true){
+						$.ajax({
+							url:"http://localhost:8080/Proxy/FootBall/user/json/queryall.do",
+							data:{"keyword":a},
+							success:function(d){
+								
+								console.log(d);
+								
+							}
+						});	
+					}
+				
+				
+				
+				
+			})
+		
+		
+	</script>
+</html>

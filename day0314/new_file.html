@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<style>
+			.box{
+				background: red;
+				height: 300px;
+			}
+			.wrap{
+				height: 300px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container wrap">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide box">Slide 1</div>
+				<div class="swiper-slide box">Slide 2</div>
+				<div class="swiper-slide box">Slide 3</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js" ></script>
+	<script type="text/javascript" src="js/swiper.animate-twice.min.js" ></script>
+	<script type="text/javascript" src="js/swiper.animate1.0.2.min.js" ></script>
+	
+	
+<script language="javascript">
+	var mySwiper = new Swiper('.swiper-container', {
+		
+		direction:"horizontal"
+		//pagination : '#swiper-pagination1',
+	})
+
+	</script>
+</html>

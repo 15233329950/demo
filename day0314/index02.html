@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找回密码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<style>
+			html,body{height: 100%;}
+			.header{
+				width: 100%;
+				height: 37px;
+				background: #0f91c5;
+				font-size: 18px;
+				text-align: center;
+				line-height: 37px;
+				color: white;
+			}
+			.form{
+				margin: 20px 15px 0 15px;
+				position: relative;
+			}
+			.form input{
+				border-bottom:1px solid darkgrey ;
+			}
+			.in_1{
+				width: 100%;
+				height: 33px;
+				
+			}
+			.in_2{
+				margin-top: 27px;
+				width: 100%;
+				height: 33px;
+				
+			}
+			.yan{
+				width: 94px;
+				height: 34px;
+				background: #0f91c5;
+				line-height: 34px;
+				text-align: center;
+				color: white;
+				position: absolute;
+				right: 0;
+				bottom: 3px;
+				border-radius:3px ;
+			}
+			.button{
+				height: 33px;
+				background: #0f91c5;
+				margin: 35px 15px 0 15px;
+				color: white;
+				line-height: 33px;
+				text-align: center;
+				border-radius:3px ;
+				letter-spacing:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			足球圈子——找回密码
+		</div>
+		<div class="form">
+			<input type="text" placeholder="手机号" class="in_1"/>
+			<input type="password" placeholder="密码" class="in_2"/>
+			<div class="yan">
+				获取验证码
+			</div>
+		</div>
+		<div class="button" id="btn">
+			提交
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		btn.onclick  = function(){
+			window.open("index03.html");
+		}
+	</script>
+</html>

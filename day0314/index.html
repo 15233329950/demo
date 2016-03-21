@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<style>
+			html,body{height: 100%;}
+			.herder{
+				width:100%;
+				height:37px;
+				text-align:center;
+				background:#0f91c5;
+				font-size:17px;
+				color:white;
+				line-height: 37px;
+			}
+			.form{
+				margin: 0 15px;
+				
+			}
+			.form input{
+				width: 100%;
+				height: 33px;
+				line-height: 33px;
+				border-bottom:1px solid grey ;
+				margin-top: 9px;
+			}
+			.form .link{
+				height: 65px;
+				line-height: 65px;
+			}
+			.form .link a{
+				color: darkgrey;
+				font-size: 12px;
+				text-decoration: underline;
+			}
+			.rbg{
+				float: right;
+			}
+			.rag{
+				float: left;
+			}
+			.button{
+				
+				height: 38px;
+				background: #0f91c5;
+				border-radius: 3px;
+				font-size: 18PX;
+				text-align: center;
+				line-height: 38px;
+				color: white;
+				letter-spacing:15px; 
+				margin: 0 15px;
+				letter-spacing:15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="herder">
+			足球圈子 —— 登录
+		</div>
+		<div class="form">
+			<input type="text" placeholder="手机号" id="uid"/>
+			<input type="password" placeholder="密码" id="pwd"/>
+			<div class="link">
+				<a href="index04.html" class="rag">注册</a>
+				<a href="index02.html" class="rbg">忘记密码?</a>
+			</div>
+			
+		</div>
+		<div class="button">
+			提交
+		</div>
+	</body>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script>
+			$('.button').on("tap",function(e){
+				e.preventDefault();
+				var uid = $('#uid').val(),
+					pwd = $('#pwd').val(),
+					userInfo = window.localStorage;
+					if(true){
+						$.ajax({
+							url:"http://localhost:8080/Proxy/FootBall/user/json/login.do",
+							data:{"loginname":uid,"password":pwd},
+							success:function(d){
+								console.log(d);
+								var data = JSON.parse(d);
+								userInfo.setItem("loginStatus","1");
+								userInfo.setItem("loginuser",data.data.loginuser);
+							}
+						});						
+					}
+				
+				
+				
+				
+			})
+	</script>
+</html>

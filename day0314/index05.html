@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>热点</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css" />
+		<style type="text/css">
+		html,body{
+			height: 100%;
+			position: relative;
+		}
+		.header{
+			width: 100%;
+			height: 37px;
+			background: #0f91c5;
+			overflow: hidden;
+			
+		}
+		.zou{
+			width: 108px;
+			height: 23px;
+			margin: 8px auto;
+			border-radius:5px ;
+			overflow: hidden;
+		}
+		.re{
+			width: 50%;
+			height: 23px;
+			float: left;
+			background: #79c1df;
+			font-size:12px;
+			text-align: center;
+			color: white;
+			line-height: 23px;
+		}
+		.guan{
+			width: 50%;
+			height: 23px;
+			float: left;
+			text-align: center;
+			background: #57b2d7;
+			
+		}
+		.guan a{
+			font-size:12px;
+			color: white;
+			line-height: 23px;
+		}
+		.zu{
+			height: 34px;
+			width: 100%;
+			border-bottom: 1px solid darkgrey;
+
+		}
+		.zu div{
+			float: left;
+			font-size: 14px;
+			width: 32%;
+			height: 31px;
+			text-align: center;
+			line-height: 34px;
+			font-weight: bold;
+		}
+		.uz{
+			border-bottom: 3px solid #0f91c5;
+			margin-right: 2%;
+		}
+		.zu00{
+			border-bottom: 3px solid #0f91c5;
+			margin-right: 2%;
+		}
+		
+		
+		
+		
+		.hui{
+			
+			width: 100%;
+			background: #f1f1f1;
+			
+		}
+		
+		.hui ul{
+			overflow: hidden;
+		}
+		.hui ul li{
+			float: left;
+			width:48%;
+			margin-bottom: 5px;
+			border: 1px solid darkgrey;
+			box-sizing: border-box;
+		}
+		.hui ul li:nth-child(odd){
+			margin-right:4%;
+			
+		}
+		.hui ul li a img{
+			border-bottom: 1px solid darkgrey;
+			margin-bottom: 3px;
+		}
+		
+		.hui ul li span{
+			display: block;
+			text-indent: 12px;
+		}
+		
+		
+		
+		
+		.lv{
+		    /*visibility: hidden;*/
+			width: 100%;
+			background: red;
+			
+		}
+		
+		.lv ul{
+			overflow: hidden;
+		}
+		.lv ul li{
+			float: left;
+			width:48%;
+			margin-bottom: 5px;
+			border: 1px solid darkgrey;
+			box-sizing: border-box;
+		}
+		.lv ul li:nth-child(odd){
+			margin-right:4%;
+			
+		}
+		.lv ul li a img{
+			margin-bottom: 3px;
+			border-bottom: 1px solid darkgrey;
+			
+		}
+		
+		.lv ul li span{
+			display: block;
+			text-indent: 12px;
+		}
+		
+		
+		
+		.lan{
+			 /*visibility: hidden;*/
+			width: 100%;
+			background: blue;
+			
+		}
+		
+		.lan ul{
+			overflow: hidden;
+		}
+		.lan ul li{
+			float: left;
+			width:48%;
+			margin-bottom: 5px;
+			border: 1px solid darkgrey;
+			box-sizing: border-box;
+		}
+		.lan ul li:nth-child(odd){
+			margin-right:4%;
+			
+		}
+		.lan ul li a img{
+			border-bottom: 1px solid darkgrey;
+			margin-bottom: 3px;
+		}
+		
+		.lan ul li span{
+			display: block;
+			text-indent: 12px;
+		}
+		
+		
+		
+		
+		.end{
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+		.end ul{
+		
+		}
+		.end ul li{
+			float: left;
+			width: 20%;
+		}
+		.end ul .li_1 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			background: url(img/g1.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_3 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			
+			background:url(img/b2.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_5 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			background: url(img/b3.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_7 a{
+			display: block;
+			width: 17px;
+			height: 15px;
+			background: url(img/b4.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 5px auto;
+		}
+		.end ul .li_1 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #0f91c5;
+			font-size: 12px;
+		}
+		.end ul .li_3 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #cccccc;
+			font-size: 12px;
+		}
+		.end ul .li_5 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #cccccc;
+			font-size: 12px;
+		}
+		.end ul .li_7 span{
+			display: block;
+			width: 26px;
+			margin:0 auto;
+			color: #cccccc;
+			font-size: 12px;
+		}
+		.end ul .li_2{
+			
+			
+			
+		}
+		.end ul .li_2 a{
+			display: block;
+			width: 43px;
+			height: 43px;
+			background: url(img/q4.png) no-repeat;
+			background-size:100% 100% ;
+			margin: 0px auto;
+			position: relative;
+			top: -5px;
+			
+		}
+		.pp{
+			width: 100%;
+			position: absolute;
+			top: 75px;bottom: 50px;
+		}
+		.ppp{
+			width: 100%;
+			
+		}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="zou">
+				<div class="re">
+					热点
+				</div>
+				<div class="guan">
+					<a href="index06.html">关注</a>
+					
+				</div>
+			</div>
+		</div>
+		<div class="zu" id="zu">
+			<div class="zu01 uz">
+				足球现场
+			</div>
+			<div class="zu01" >
+				足球生活
+			</div>
+			<div class="zu01">
+				足球美女
+			</div>
+		</div>
+		
+		<div class="swiper-container pp" id="pp">
+			<div class="swiper-wrapper ppp">
+				<div class="hui swiper-slide" id="hui">
+					<ul id="ul">
+						<li></li>
+						<li></li>
+					</ul>
+					
+				</div>
+				<div class="lv swiper-slide" id="lv">
+					<ul id="ul">
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="lan swiper-slide" id="lan">
+					<ul id="ul">
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+					
+			</div>
+		</div>
+	
+			<div class="center_1">
+			
+			</div>
+			
+			
+			<div class="end">
+				<ul >
+					<li class="li_1"><a></a><span>首页</span></li>
+					<li class="li_3"><a href="index07.html"></a><span>发现</span></li>
+					<li class="li_2"><a></a></li>
+					<li class="li_5"><a href="index08.html"></a><span>我的</span></li>
+					<li class="li_7"><a></a><span>退出</span></li>
+				</ul>
+				
+			</div>
+			
+
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+	<script type="text/javascript" src="js/iscroll.js" ></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js" ></script>
+	<script type="text/javascript" src="js/swiper.animate-twice.min.js" ></script>
+	<script type="text/javascript" src="js/swiper.animate1.0.2.min.js" ></script>
+	<script>
+		
+		var $nav = $(".zu01");
+		var mySwiper = new Swiper('.swiper-container',{
+		pagination : '.swiper-pagination',
+		//pagination : '#swiper-pagination1',
+		
+		onSlideChangeEnd : function(swiper){
+			var index = swiper.activeIndex;
+			$nav.eq(index).addClass("zu00").siblings().removeClass("zu00").removeClass("uz");
+			
+		}
+		})
+	
+
+		var myScroll = new iScroll("hui",{zoom:true});
+		var heScroll = new iScroll("lv",{zoom:true});
+    	var sheScroll = new iScroll("lan",{zoom:true});
+//		
+		var zu = document.getElementById("zu");
+		var dang = zu.getElementsByTagName("div")
+		for( var i = 0; i<dang.length;i++){
+			dang[i].index = i;
+			dang[i].onclick = function(){
+				for(var j = 0;j<dang.length;j++){
+					dang[j].style.border = "none";
+				}
+				this.style.borderBottom = "3px solid #0f91c5";
+			}
+		
+		}
+//		
+//		$("#zu>div").click(function(){
+//			$(this).css("border-bottom","3px solid #0f91c5");
+//			$(this).siblings().css("border","none");
+//		})
+//		
+//		$("#zu02").click(function(){
+//		$("#lv").css("visibility","visible")
+//		$("#hui").css("visibility","hidden")
+//		$("#lan").css("visibility","hidden")
+//		
+//		})
+//		
+//		$("#zu01").click(function(){
+//		$("#lv").css("visibility","hidden")
+//		$("#hui").css("visibility","visible")
+//		$("#lan").css("visibility","hidden")
+//		})
+//		
+//		$("#zu03").click(function(){
+//		$("#lv").css("visibility","hidden")
+//		$("#hui").css("visibility","hidden")
+//		$("#lan").css("visibility","visible")
+//		})
+//	
+
+				
+				
+				$(".zu01").click(function(){
+						var ind = $(this).index() + 1;
+						 picLoad(ind);
+					});
+
+					function picLoad(ind){
+						var oUl = document.getElementById("ul");
+						var oLi = oUl.getElementsByTagName("li");
+						$("#ul li").html("");
+					
+						$.ajax({
+							"type":"get",
+							"url":"http://localhost:8080/Proxy/FootBall/tweet/json/query/hotspot.do",
+							"async":true,
+							"data":{
+								"category":ind
+							},
+							"success":function(rsp){
+								console.log(rsp)
+								var rsp = JSON.parse(rsp);
+								var str = "";
+								//console.log(rsp.data.tweetlist[i].defaultFilePath);
+                            
+							for(var i = 0; i < rsp.data.tweetlist.length; i++){
+									str = '<a><img src="http://101.200.173.217:8080/FootBall' + rsp.data.tweetlist[i].defaultFilePath + rsp.data.tweetlist[i].thumbnailname +'" alt="" /></a><span>' + rsp.data.tweetlist[i].content +'</span>'
+									oLi[compare()].innerHTML += str;
+
+							}
+							
+							function compare(){
+								var index = 0;
+								var min = oLi[index].offsetHeight;
+								for(var i= 0; i < oLi.length; i ++){
+									if(oLi[i].offsetHeight < min ){
+										index = i;
+										min = oLi[index].offsetHeight;
+									}
+								}
+								return index;
+							}
+								
+							}			
+						})
+					}
+	</script>
+</html>
